@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h4>Select password criteria.</h4>
+        </div>
+        <div class="card-body">
+          <!-- Password Length -->
+          <label for="number">Password Length: </label>
+          <input
+            id="numlength"
+            type="number"
+            placeholder="Length? 8-128"
+            min="8"
+            max="128"
+          />
+          <div class="checkBoxes">
+            <!-- lowercase Checkbox -->
+            <input type="checkbox" name="lowercase" id="lowercase" />
+            <label for="lowercase">Check to include lowercase characters</label>
+            <!-- UPPERCASE Checkbox -->
+            <input type="checkbox" name="uppercase" id="uppercase" />
+            <label for="uppercase">Check to include UPPER characters</label>
+            <!-- Numeric -->
+            <input type="checkbox" name="numeric" id="numeric" />
+            <label for="numeric">Check fto includeor Numeric characters</label>
+            <!-- Special Characters -->
+            <input
+              type="checkbox"
+              name="specialcharacters"
+              id="specialCharacters"
+            />
+            <label for="specialcharacters"
+              >Check to include Special Characters</label
+            >
+          </div>
+        </div>
+        <!-- Output Area -->
+        <textarea
+          readonly
+          id="outputPassword"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
+        <!-- Submit Button -->
+        <button id="submitBtn">Generate Password</button>
+      </div>
+    </div>
+  </body>
+</html>
